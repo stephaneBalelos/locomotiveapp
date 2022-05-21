@@ -19,7 +19,7 @@ CarrierWave.configure do |config|
     config.aws_credentials  = {
       access_key_id:      ENV['AWS_ACCESS_KEY_ID'],
       secret_access_key:  ENV['AWS_SECRET_ACCESS_KEY'],
-      region:             ENV['S3_BUCKET_REGION']
+      region:             ENV['AWS_REGION']
     }
 
     # Use a different endpoint (eg: another provider such as Exoscale)
