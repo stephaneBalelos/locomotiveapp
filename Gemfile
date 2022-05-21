@@ -27,11 +27,12 @@ gem 'jbuilder', '~> 2.5'
 
 gem 'devise', '~> 4.7.1'
 gem 'mongoid', '~> 6.4.0'
-gem 'locomotivecms', path: 'locomotive-engine'
 gem 'dotenv-rails', groups: [:development, :test]
 gem 'capistrano', '~> 3.11'
 gem 'capistrano-passenger', '~> 0.2.0'
 gem 'capistrano-rbenv', '~> 2.1', '>= 2.1.4'
+
+gem 'locomotivecms', github: 'Balelos/locomotive-engine'
 
 # Use Capistrano for deployment
 gem 'capistrano-rails', group: :development

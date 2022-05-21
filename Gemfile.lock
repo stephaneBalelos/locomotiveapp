@@ -1,5 +1,6 @@
-PATH
-  remote: locomotive-engine
+GIT
+  remote: https://github.com/Balelos/locomotive-engine.git
+  revision: a3919e53f1fb26e8b440e12fddb3f6a36f981cf3
   specs:
     locomotivecms (4.1.0.rc2)
       actionmailer-with-request (~> 0.5.0)
