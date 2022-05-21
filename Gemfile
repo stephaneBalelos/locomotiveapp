@@ -30,12 +30,11 @@ gem 'mongoid', '~> 6.4.0'
 gem 'locomotivecms', path: 'locomotive-engine'
 gem 'dotenv-rails', groups: [:development, :test]
 gem 'capistrano', '~> 3.11'
-gem 'capistrano-rails', '~> 1.4'
 gem 'capistrano-passenger', '~> 0.2.0'
 gem 'capistrano-rbenv', '~> 2.1', '>= 2.1.4'
 
 # Use Capistrano for deployment
-# gem 'capistrano-rails', group: :development
+gem 'capistrano-rails', group: :development
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
