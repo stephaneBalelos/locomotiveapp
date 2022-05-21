@@ -11,14 +11,14 @@ Locomotive.configure do |config|
 
   # configure how many items we display in sub menu in the "Models" section.
   config.ui = {
-    per_page: 10
+    per_page: 20
   }
 
   # default locale (for now, only en, de, fr, pl, pt, pt-BR, it, nl, nb, ja, cs, bg, sk, sv and uk are supported)
   config.default_locale = :en
 
   # locales allowed for the back-office UI
-  config.locales = [:en, :fr, :de, :"zh-CN", :cs, :el, :lt, :"pt-BR", :nl, :ru]
+  config.locales = [:en, :fr, :de, :"zh-CN", :cs, :el, :lt]
 
   # available locales suggested to "localize" a site. You will have to pick up at least one among that list.
   # config.site_locales = %w{en de fr pl pt pt-BR it nl nb es ru ja cs bg sk uk}
