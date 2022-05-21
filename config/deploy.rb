@@ -1,8 +1,8 @@
 # config valid for current version and patch releases of Capistrano
 lock "~> 3.17.0"
 
-set :application, "cms"
-set :repo_url, "git@github.com:stephaneBalelos/cms.git"
+set :application, "locomotiveapp"
+set :repo_url, "git@github.com:stephaneBalelos/locomotiveapp.git"
 
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
