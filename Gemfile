@@ -27,7 +27,7 @@ gem 'jbuilder', '~> 2.5'
 
 gem 'devise', '~> 4.7.1'
 gem 'mongoid', '~> 6.4.0'
-gem 'locomotivecms', path: '../locomotive-engine'
+gem 'locomotivecms', path: 'locomotive-engine'
 gem 'dotenv-rails', groups: [:development, :test]
 gem 'capistrano', '~> 3.11'
 gem 'capistrano-rails', '~> 1.4'
