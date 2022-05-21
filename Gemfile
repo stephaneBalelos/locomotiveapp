@@ -25,6 +25,10 @@ gem 'jbuilder', '~> 2.5'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
+gem 'devise', '~> 4.7.1'
+gem 'mongoid', '~> 6.4.0'
+gem 'locomotivecms', path: '../locomotive-engine'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
@@ -55,3 +59,6 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+gem 'carrierwave-aws'
+gem 'rack-cors', require: 'rack/cors'
