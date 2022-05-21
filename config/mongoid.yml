@@ -149,6 +149,29 @@ development:
     # Application name that is printed to the mongodb logs upon establishing a
     # connection in server versions >= 3.4. Note that the name cannot exceed 128 bytes.
     # app_name: MyApplicationName
+production:
+  clients:
+    default:
+      database: <%= "#{ENV['MDB_DB_NAME']}" %>
+      hosts:
+        - <%= "#{ENV['MDB_HOST']}" %>
+      options:
+        user: <%= "#{ENV['MDB_USERNAME']}" %>
+        password: <%= "#{ENV['MDB_PASSWORD']}" %>
+        roles:
+          - 'dbOwner'
+
+        auth_mech: :scram
+
+        auth_source: admin
+        ssl: true
+        ssl_verify: true
+
+        ssl_ca_cert: <%= "#{ENV['MDB_CA_CERT_PATH']}" %>
+  # Configure Mongoid specific options. (optional)
+  options:
+    app_name: CMS
+    
 test:
   clients:
     default:
