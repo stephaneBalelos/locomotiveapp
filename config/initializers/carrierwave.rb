@@ -5,8 +5,25 @@ CarrierWave.configure do |config|
   case Rails.env.to_sym
 
   when :development
-    config.storage = :file
-    config.root = File.join(Rails.root, 'public')
+    config.storage          = :aws
+    config.aws_bucket       = ENV['DEV_AWS_S3_BUCKET']
+    config.aws_acl          = 'public-read'
+
+    config.aws_credentials  = {
+      access_key_id:      ENV['DEV_AWS_ACCESS_KEY_ID'],
+      secret_access_key:  ENV['DEV_AWS_SECRET_ACCESS_KEY'],
+      region:             ENV['DEV_AWS_REGION']
+    }
+
+    # Use a different endpoint (eg: another provider such as Exoscale)
+    if ENV['DEV_S3_ENDPOINT'].present?
+      config.aws_credentials[:endpoint] = ENV['DEV_S3_ENDPOINT']
+    end
+
+    # Put your CDN host below instead
+    if ENV['DEV_S3_ASSET_HOST_URL'].present?
+      config.asset_host = ENV['DEV_S3_ASSET_HOST_URL']
+    end
 
   when :production
     # WARNING: add the "carrierwave-aws" gem in your Rails app Gemfile.
