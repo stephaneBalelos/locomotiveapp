@@ -32,7 +32,7 @@ gem 'capistrano', '~> 3.11'
 gem 'capistrano-passenger', '~> 0.2.0'
 gem 'capistrano-rbenv', '~> 2.1', '>= 2.1.4'
 
-gem 'locomotivecms', github: 'Balelos/locomotive-engine'
+gem 'locomotivecms', github: 'Balelos/locomotive-engine', branch: 'im'
 
 # Use Capistrano for deployment
 gem 'capistrano-rails', group: :development
